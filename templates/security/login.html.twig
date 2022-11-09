@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+{% block body %}
+	<div class="card col-md-8 offset-2">
+		<div class="card-header">
+			<h3>
+				<i class="fas fa-user-check"></i>
+				Déjà Membre : Connexion</h3>
+		</div>
+		<div class="card-body">
+			<form method="post">
+				{% if error %}
+					<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+				{% endif %}
+
+				{% if app.user %}
+					<div class="mb-3">
+						Vous êtes connecté en tant que
+						{{ app.user.username }},
+						<a href="{{ path('app_logout') }}">Logout</a>
+					</div>
+				{% endif %}
+
+
+				<div class="form-group">
+					<label for="inputEmail">Email</label>
+					<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+				</div>
+				<div class="form-group">
+					<label for="inputPassword">Mot de Passe</label>
+					<input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+                        <input type="hidden" name="_csrf_token"value="{{ csrf_token('authenticate') }}">
+           				</div>
+				<div class="col-md-12 btn-group" style="padding:0px">
+                    <button class="btn btn-lg btn-primary" type="submit">
+                        Connexion				
+                 </div>
+			</form>
+		</div>
+	</div>
+{% endblock %}
+

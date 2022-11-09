@@ -1,0 +1,14 @@
+{# templates/Devise/navBarDevise.html.twig #}
+
+<span class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{deviseCourante}}
+</span>
+<div class="dropdown-menu" aria-labelledby="dropdown02" style="min-width: 5rem;"> 
+    {% for devise in tabDevise %}
+        {% if devise != deviseCourante %}
+            <a class="dropdown-item" href="{{ path('changer_monnaie', {'devise' : devise}) }}">
+                {{devise}}
+            </a>
+        {% endif %}
+    {% endfor %}
+</div>

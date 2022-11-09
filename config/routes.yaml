@@ -1,3 +1,124 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+   path: /{_locale}
+   controller: App\Controller\DefaultController::index
+   requirements:
+      _locale: '%app.supported_locales%'
+   defaults:
+      _locale: fr
+
+
+contact:
+    path : /{_locale}/contact
+    controller :  App\Controller\DefaultController::contact
+    requirements:
+      _locale: '%app.supported_locales%'
+    defaults:
+      _locale: fr
+
+changer_monnaie : 
+    path : /{_locale}/changermonnaie/{devise}
+    controller : App\Controller\DefaultController::saveDevise
+    requirements:
+      _locale: '%app.supported_locales%'
+    defaults:
+      _locale: fr
+
+boutique:
+    path : /{_locale}/boutique
+    controller :  App\Controller\BoutiqueController::index
+    requirements:
+      _locale: '%app.supported_locales%'
+    defaults:
+      _locale: fr
+
+rayon:
+    path : /{_locale}/rayon/{idCategorie}
+    controller :  App\Controller\BoutiqueController::rayon
+    requirements:
+      _locale: '%app.supported_locales%'
+    defaults:
+      _locale: fr
+      idCategorie: 1
+
+chercher:
+    path : /{_locale}/chercher/
+    controller :  App\Controller\BoutiqueController::chercher
+    requirements:
+      _locale: '%app.supported_locales%'
+    defaults:
+      _locale: fr
+  
+panier_ajouter:
+    path : /{_locale}/panier/ajouter/{idProduit}/{quantite}
+    controller :  App\Controller\PanierController::ajouter
+    requirements:
+      _locale: '%app.supported_locales%'
+    defaults:
+      _locale: fr
+
+panier_index:
+    path : /{_locale}/panier
+    controller :  App\Controller\PanierController::index
+    requirements:
+      _locale: '%app.supported_locales%'
+    defaults:
+      _locale: fr
+
+panier_enlever:
+    path : /{_locale}/panier/enlever/{idProduit}/{quantite}
+    controller :  App\Controller\PanierController::enlever
+    requirements:
+      _locale: '%app.supported_locales%'
+    defaults:
+      _locale: fr
+
+panier_supprimer:
+    path : /{_locale}/panier/supprimer/{idProduit}
+    controller :  App\Controller\PanierController::supprimer
+    requirements:
+      _locale: '%app.supported_locales%'
+    defaults:
+      _locale: fr
+
+panier_vider:
+    path : /{_locale}/panier/vider
+    controller :  App\Controller\PanierController::vider
+    requirements:
+      _locale: '%app.supported_locales%'
+    defaults:
+      _locale: fr
+      
+panier_validation : 
+    path : /{_locale}/panier/validation
+    controller : App\Controller\PanierController::validation
+    requirements:
+      _locale: '%app.supported_locales%'
+    defaults:
+      _locale: fr
+
+usager_accueil :
+    path : /{_locale}/user
+    controller : App\Controller\UsagerController::index
+    requirements:
+      _locale: '%app.supported_locales%'
+    defaults:
+      _locale: fr
+
+usager_inscription : 
+    path : /{_locale}/user/new
+    controller : App\Controller\UsagerController::new
+    requirements:
+      _locale: '%app.supported_locales%'
+    defaults:
+      _locale: fr
+
+usager_commandes : 
+    path : /{_locale}/user/commandes
+    controller : App\Controller\UsagerController::commandes
+    requirements:
+      _locale: '%app.supported_locales%'
+    defaults:
+      _locale: fr
+
+
+

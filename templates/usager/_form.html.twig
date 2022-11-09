@@ -1,0 +1,51 @@
+{# {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }} #}
+
+
+{{ form_start(form) }}
+	{# <div class="row">
+		<div class="col">{{ form_row(form.email) }}</div>
+		<div class="col">{{ form_row(form.password) }}</div>
+	</div>
+	<div class="row">
+		<div class="col">{{ form_row(form.nom) }}</div>
+		<div class="col">{{ form_row(form.prenom) }}</div>
+	</div>
+	{{ form_rest(form) }}
+	<div class="form-group">
+		<button class="btn btn-lg btn-primary">Inscription</button>
+
+	</div> #}
+	<div class="card col-md-8 offset-2">
+		<div class="card-header">
+			<h3><i class="fas fa-user-plus"></i> Nouveau Membre : Inscription</h3>
+		</div>
+		<div class="card-body">
+	
+                
+				<div class="form-group">
+                    {{ form_row(form.email) }}
+				
+                </div>
+				<div class="form-group">
+                    {{ form_row(form.password) }}
+           		</div>
+                   <div class="form-group">
+                    {{ form_row(form.nom) }}
+           		</div>
+                   <div class="form-group">
+                    {{ form_row(form.prenom) }}
+           		</div>
+				   {{ form_rest(form) }}
+                <div class="col-md-12 btn-group" style="padding:0px">
+
+					<button class="btn btn-lg btn-primary">Inscription</button>
+
+                </div> 
+			</form>
+		</div>
+	</div>
+
+{{ form_end(form) }}

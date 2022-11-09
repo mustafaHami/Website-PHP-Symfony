@@ -1,0 +1,18 @@
+{# templates/Panier/nbProduit.html.twig #} 
+{% if tabProduitPlusVendu is empty %}
+    
+        <li class="list-group-item text-center clickable">
+            <p>Aucun produit vendu</i></p>
+        </li>
+    
+{% else %}
+    
+   {% for tabProduit in tabProduitPlusVendu %}
+        <a href="{{ path('rayon',{'idCategorie' : tabProduit.produit.categorie.id}) }}">
+            <li class="list-group-item text-center clickable">
+                <img src="{{ asset(tabProduit.produit.visuel)}}" style="height: 40px;"/>
+                <p>{{tabProduit.produit.libelle}}<br><i>{{tabProduit.quantite}}</i></p>
+            </li>
+        </a>
+    {% endfor %}
+{% endif %}

@@ -1,0 +1,33 @@
+{# template/Panier/panierValide.html.twig#}
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Commande Valide
+{% endblock %}
+
+{% block body %}
+<div class="alert alert-success" role="alert">
+    Merci pour votre Commande !
+    Un mail Vous a été envoyé .
+</div>
+<div class="card col-md-9"  style="width: 29rem; margin : auto;">
+    <div class="card-body">
+        <h3 class="card-title">
+            Merci pour votre commande 
+            <strong class="text-muted">{{app.user.nom|upper }} {{app.user.prenom|capitalize}}</Strong> <br>
+            <i  class=" fas fa-thumbs-up"></i>
+        </h3>
+        </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><h4>Numéro de la Commande</h4></li>
+        <li class="list-group-item"><h5>{{commande.id}}</h5></li>
+    </ul>
+    <div class="card-body">
+        
+        <a class="btn btn-primary" href="{{ path('usager_commandes') }}">
+            Visualiser mes commandes              
+         </a>
+        
+       </div>
+</div>   
+{% endblock %}

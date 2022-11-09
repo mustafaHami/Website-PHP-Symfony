@@ -1,0 +1,107 @@
+
+<style>
+     body{
+        font-family: sans-serif;
+    }
+    .commande{
+       background-color: rgb(224, 246, 253);
+        align-items: center;
+        text-align : center; 
+        border : 2px solid rgb(3, 64, 121); 
+        margin: auto;
+        box-shadow: 2px 2px 2px 2px rgb(204, 220, 245);
+        border-radius: 5px;
+    }
+    h1{
+        margin: auto; border-radius: 4px; 
+        padding: 20px;
+        font-family: Andale Mono, monospace	;
+        
+    }
+    h3{
+        color: rgb(38, 128, 212);
+        border: 3px solid rgb(185, 202, 247);
+        border-radius: 7px;
+        width: 50%;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    table{
+        border: 2px solid rgb(38, 128, 212);
+        margin: auto; margin-bottom: 20px; 
+        border-collapse: collapse;
+        width: 80%;
+        border-radius: 5px;
+    }
+
+    th{
+        border: thin solid #6495ed;
+        padding: 5px;
+        
+    }
+    td{
+        border: thin solid #04358f;       
+        padding: 5px;
+        text-align: center;
+    }
+    Strong{
+        font-size: large;
+        color: rgb(1, 122, 1);
+        box-shadow:2px 2px 2px 2px rgb(0, 206, 0);
+        background-color: rgb(179, 241, 179);
+    }
+    .bientot{
+        margin: 10px;
+    }
+</style>
+<div class="commande">
+<H1 > Merci Pour votre commande {{usager.nom|upper }} {{usager.prenom|capitalize}} </H1>
+    <table >
+        <thead>
+            <tr>
+                <th>Produit</th>
+                <th>Quantite</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+
+        {% for ligneCommande in tabLigneCommande %}
+        
+            <tbody>
+                <tr>
+                    <td> 
+                        <a>
+                            <b>{{ligneCommande.produit.libelle}}</b>
+                        </a>
+                    </td>
+                    <td>
+                        {{ligneCommande.quantite}}
+
+                    </td>
+                    <td>
+                        {{ligneCommande.prix|currency_convert|format_currency(devise)}}
+                    </td>
+
+                </tr>
+            </tbody>
+        {% endfor %}
+        <thead>
+            <tr>
+            <th>
+            </th>
+                <th>
+                    Total                                
+                </th>
+                <th>
+                    {{total|currency_convert|format_currency(devise)}}
+                </th>
+            </tr>
+        </thead>
+
+    </table>
+    <div class="bientot">
+         <Strong> À TRÈS BIENTÔT </Strong>
+    </div>
+  
+</div>

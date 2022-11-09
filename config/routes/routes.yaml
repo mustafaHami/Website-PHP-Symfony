@@ -1,0 +1,6 @@
+# config/routes.yaml
+hello_page:
+  path: /hello/{userName}
+  controller: App\Controller\DefaultController::hello 
+  defaults:
+    userName: 'Anonyme'

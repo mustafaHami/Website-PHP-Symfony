@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="rIsAC1h" resname="navbar.boutique">
+        <source>navbar.boutique</source>
+        <target>Store</target>
+      </trans-unit>
+      <trans-unit id="rn2kpZf" resname="navbar.produit">
+        <source>navbar.produit</source>
+        <target> Item(s)</target>
+      </trans-unit>
+      <trans-unit id="iVNeBrZ" resname="navbar.contact">
+        <source>navbar.contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="qTTgibL" resname="navbar.connexion">
+        <source>navbar.connexion</source>
+        <target>Sign in</target>
+      </trans-unit>
+      <trans-unit id="jHtGXzP" resname="navbar.connexioninscription">
+        <source>navbar.connexioninscription</source>
+        <target>Sign in</target>
+      </trans-unit>
+      <trans-unit id="2FHEnbz" resname="navbar.moncompte">
+        <source>navbar.moncompte</source>
+        <target>My Account</target>
+      </trans-unit>
+      <trans-unit id="NoYDfYu" resname="navbar.mescommandes">
+        <source>navbar.mescommandes</source>
+        <target>My Orders</target>
+      </trans-unit>
+      <trans-unit id="SPkuTC3" resname="navbar.deconnexion">
+        <source>navbar.deconnexion</source>
+        <target>Logout</target>
+      </trans-unit>
+      <trans-unit id="XTV9.Cf" resname="accueil.slogan">
+        <source>accueil.slogan</source>
+        <target>We don't sell anything, we just want to learn</target>
+      </trans-unit>
+      <trans-unit id="fBTOR5V" resname="base.topvente">
+        <source>base.topvente</source>
+        <target>Top sales</target>
+      </trans-unit>
+      <trans-unit id="LdvKkxh" resname="accueil.demo">
+        <source>accueil.demo</source>
+        <target>Symfony Demo</target>
+      </trans-unit>
+      <trans-unit id="VYTR44p" resname="nav.home">
+        <source>nav.home</source>
+        <target>SF Demo</target>
+      </trans-unit>
+      <trans-unit id="hXMMVGm" resname="navbar.recherche">
+        <source>navbar.recherche</source>
+        <target>"Search Items..."</target>
+      </trans-unit>
+      <trans-unit id="T7nfyVD" resname="base.ventes">
+        <source>base.ventes</source>
+        <target>Sales</target>
+      </trans-unit>
+      <trans-unit id="rwFZlha" resname="panier.continuer">
+        <source>panier.continuer</source>
+        <target>Continue shopping</target>
+      </trans-unit>
+      <trans-unit id="YHlGn3q" resname="panier.passercommande">
+        <source>panier.passercommande</source>
+        <target>Place Orders</target>
+      </trans-unit>
+      <trans-unit id="EomIZHs" resname="panier.produit">
+        <source>panier.produit</source>
+        <target>Item</target>
+      </trans-unit>
+      <trans-unit id="5L5gp9P" resname="panier.prix">
+        <source>panier.prix</source>
+        <target>Price</target>
+      </trans-unit>
+      <trans-unit id="xkX5skH" resname="panier.quantite">
+        <source>panier.quantite</source>
+        <target>Quantity</target>
+      </trans-unit>
+      <trans-unit id="hcml3k." resname="panier.supprimer">
+        <source>panier.supprimer</source>
+        <target>Delete</target>
+      </trans-unit>
+      <trans-unit id="WHkGMLO" resname="rayon.categorie">
+        <source>rayon.categorie</source>
+        <target>Categories</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
